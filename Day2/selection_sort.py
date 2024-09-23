@@ -1,4 +1,5 @@
-l=[9,10,45,67,78,90]
+n=int(input("Enter no of elements=="))
+l=[int(input("Enter element ==")) for i in range(n)]
 for i in range(len(l)):
     min_index=i
     for j in range(i+1,len(l)):
