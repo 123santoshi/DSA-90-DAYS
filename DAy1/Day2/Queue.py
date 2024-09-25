@@ -9,7 +9,7 @@ class Queue:
         if(self.isempty()):
             return "No elements found in queue"
         else:
-            return self.queue[-1]
+            return self.queue[0]
         
     def display(self):
         if(self.isempty()):
@@ -20,24 +20,18 @@ class Queue:
     def enqueue(self,item):
         if(len(self.queue)>=size):
             return "Overflow"
-        elif(len(self.queue)==0):
+        else:
             self.queue.append(item)
             print(self.queue)
             return "{} is enqueued to the queue".format(item)
 
-        else:
-            self.queue.append(0)
-            for  i in range(len(self.queue)-2,-1,-1):
-                self.queue[i+1]=self.queue[i]
-            self.queue[0]=item
-            return "{} is enqueued to the queue".format(item)
 
     def dequeue(self):
         if(len(self.queue)==0):
             return "Underflow"
         else:
-            del_item=self.queue[-1]
-            self.queue.pop(-1)
+            del_item=self.queue[0]
+            self.queue.pop(0)
             return del_item
         
 
