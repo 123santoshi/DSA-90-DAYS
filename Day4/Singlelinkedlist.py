@@ -46,9 +46,9 @@ class SLL:
         else:
             temp=self.head
             while temp:
-                c+=1
+                count+=1
                 temp=temp.next
-        return c
+        return count
         
     def display(self):
         if self.head is None:
@@ -99,6 +99,7 @@ if __name__=="__main__":
             res=s.delete_end()
         elif(option==6):
             res=s.length()
+            print(res)
         elif(option==7):
             ele=int(input("Enter element to insert into the linked list ==="))
             pos=int(input("Enter in which position you want to insert the element"))
