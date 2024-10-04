@@ -64,6 +64,7 @@ class DLL:
                 print(temp.data, "==>", end=" ")
                 temp=temp.next
             print(temp.data)
+
     
     def length(self):
         count=0
@@ -77,6 +78,7 @@ class DLL:
                 print("size of DLL is {}".format(count))
                 temp=temp.next
     
+
     def insert_at_pos(self,data,pos):
         if(pos==0 or self.head is None):
             self.insert_at_begin(data)
@@ -91,6 +93,7 @@ class DLL:
             new_node.next=temp
             temp.prev.next=new_node
             temp.prev=new_node
+            
     
     def search (self,item):
         found=0
